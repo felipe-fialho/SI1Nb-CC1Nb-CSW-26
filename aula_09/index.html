@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aula_09</title>
+
+</head>
+</body>
+<h1>Formulario</h1>
+<table border="1">
+    <tr>
+        <th><label for="nome">Nome:</label></th>
+        <th><input type="text" id="nome" name="nome" placeholder="Digite seu nome."></th>
+    </tr>
+    <tr>
+        <th><label for="email">E-mail:</label></th>
+        <th><input type="email" id="email" name="E-mail"></th>
+    </tr>
+    <tr>
+        <th><label for="email pessoal">E-mail Pessoal:</label></th>
+        <th><input type="email" id="email pessoal" name="E-mail" placeholder="Digite seu E-mail."></th>
+    </tr>
+    <tr>
+        <th><label for="senha">Senha:</label></th>
+        <th><input type="password" id="senha" name="senha"></th>
+    </tr>
+    <tr>
+        <th><label for="idade">Idade:</label></th>
+        <th><input type="text" id="idade" name="idade"></th>
+    </tr>
+    <tr>
+        <th colspan="2"><label for="comentario">
+                <h5>Deixe seu comentário</h5>
+                <textarea id="comentario" name="comentario" cols="50" rows="10"></textarea>
+            </label></th>
+    </tr>
+    <tr>
+        <th><label for="interesse">Matéria de interesse</label><br>
+            <input type="checkbox" name="backend" value="Backend">Back End<br>
+            <input type="checkbox" name="backend" value="Frontend">Front End<br>
+            <input type="checkbox" name="backend" value="Fullstack">Full Stack
+        </th>
+        <th>
+            <label for="interesse">Tipo de Viagem</label><br>
+            <input type="radio" name="negocios" value="Backend">Négocios<br>
+            <input type="radio" name="lazer" value="Frontend">Lazer<br>
+            <input type="radio" name="turismo" value="Fullstack">Turismo<br>
+            <input type="radio" name="academico" value="Fullstack">Academico
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <label for="esporte">Esporte Favorito</label>
+            <select name="esporte" size="4" multiple>
+        </th>
+    </tr>
+</table>
+</body>
+
+</html>
