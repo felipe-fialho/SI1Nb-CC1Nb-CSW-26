@@ -50,12 +50,53 @@
             <input type="radio" name="turismo" value="Fullstack">Turismo<br>
             <input type="radio" name="academico" value="Fullstack">Academico
         </th>
+        </th>
     </tr>
     <tr>
         <th>
             <label for="esporte">Esporte Favorito</label>
             <select name="esporte" size="4" multiple>
+                <option value="Futebol">Futebol</option>
+                <option value="basquete">Basquete</option>
+                <option value="volei">Volei</option>
+                <option value="tenis">Tênis</option>
+            </select>
+
         </th>
+        <th>
+            <label for="investimento">Esporte Favorito</label>
+            <select name="investimento" size="1">
+                <option value="poupanca">Poupança</option>
+                <option value="cdb">CDB</option>
+                <option value="Tesouro">Tesouro Direto</option>
+                <option value="fundos">Fundos Imobiliarios</option>
+                <option value="cdi">CDI</option>
+                <option value="debentures">Debêntures</option>
+                <option value="criptomoedas">Criptomoedas</option>
+                <option value="acoes">Ações</option>
+            </select>
+        </th>
+    </tr>
+    <tr>
+        <td>Escolha uma cor:
+            <input type="color" name="cor" value="#000000">
+        </td>
+
+        <td>Selecione um arquivo:
+            <input type="file" name="arquivo">
+        </td>
+    </tr>
+
+    <tr>
+        <td>Data e Hora envio:
+            <input type="datetime-local" name="datahora">
+        </td>
+    </tr>
+
+    <tr>
+           <td><input type="submit" value="Enviar"></td>
+           <td><input type="reset" value="Limpar"></td>
+        
     </tr>
 </table>
 </body>
