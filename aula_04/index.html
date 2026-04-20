@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula-03</title>
+</head>
+
+</body>
+<h1>Principais Formatacoes</h1>
+
+<h2>Negrito Vs Destaque</h2>
+<p>Na frase temos uma <b>parte do texto em negrito</b> usando a Tag b(não semântica)</p>
+<p>Na frase temos uma <strong>parte do texto em negrito</strong> usando a Tag strong(com semântica)</p>
+
+<h2>Itálico/enfase</h2>
+<p>Nesta frase vamos entrar com uma palavra em<i> itálico</i> usando a Tag I(não semântica)</p>
+<p>Nesta frase vamos entrar com uma palavra em<EM> itálico</EM> usando a Tag EM(com semântica)</p>
+
+<h2>Texto Marcador</h2>
+<p>Aqui Vamos usar um texto com destaque <mark style="background-color: green;">de marcador de texto</mark> usando a Tag
+    mark</p>
+<p>Aqui Vamos usar um texto com destaque <mark style="background-color: yellow;">de marcador de texto</mark> usando a
+    Tag mark</p>
+
+<h2>Texto Grande e Pequeno</h2>
+<p>Estamos trabalhando aqui com um <big>texto grande</big> e um <small>texto pequeno</small> nesta frase</p>
+
+<h2>Texto deletado</h2>
+<p>Neste paragrafo vamos trabalhar com um texto <del>que foi deletado</del> da frase(forma semântica)</p>
+
+<h2>Texto Inserido</h2>
+<p>Nesta frase vamos demostrar como <ins>destacar um texto inserido</ins> na frase de forma semântica</p>
+<p>Nesta frase vamos demostrar como <u>destacar um texto inserido</u> na frase de forma semântica</p>
+
+<h2>Texto Subscrito</h2>
+<P>Vamos demostrar uma formula de equação do segundo grau ax<sup>²</sup> + bx + c = 0 usando tag sup</P>
+
+<h2>Texto Subscrito</h2>
+<p>Vamos demostrar o texto subscrito com a formula da agua <sub>H2O</sub> usando a tag sub</p>
+
+<h2>Trecho do codigo fonte</h2>
+<p>Neste exemplo vou demostrar um trecho de código inserido o comando <code>document.getElementByid('edCodigo')</code>
+    que é um comando C++ </p>
+<code>
+<pre>
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double a, b, c;
+    
+    cout << "Digite os coeficientes a, b e c: ";
+    cin >> a >> b >> c;
+
+    if (a == 0) {
+        cout << "Isso nao e uma equacao do segundo grau." << endl;
+        return 0;
+    }
+
+    double delta = b * b - 4 * a * c;
+
+    if (delta > 0) {
+        double x1 = (-b + sqrt(delta)) / (2 * a);
+        double x2 = (-b - sqrt(delta)) / (2 * a);
+        cout << "Duas raizes reais:" << endl;
+        cout << "x1 = " << x1 << endl;
+        cout << "x2 = " << x2 << endl;
+    } 
+    else if (delta == 0) {
+        double x = -b / (2 * a);
+        cout << "Uma raiz real (raiz dupla):" << endl;
+        cout << "x = " << x << endl;
+    } 
+    else {
+        double real = -b / (2 * a);
+        double imag = sqrt(-delta) / (2 * a);
+        cout << "Raizes complexas:" << endl;
+        cout << "x1 = " << real << " + " << imag << "i" << endl;
+        cout << "x2 = " << real << " - " << imag << "i" << endl;
+    }
+
+    return 0;
+}
+</pre>
+</code>
+
+</body>
+</html>

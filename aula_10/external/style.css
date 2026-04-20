@@ -1,0 +1,47 @@
+    @charset "UTF-8";
+
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        background-color: lightgray;
+    }
+
+    h1 {
+        font-size: 50px;
+        color: rgb(230, 255, 6);
+        background-color: aqua;
+    }
+
+    h2 {
+        font-size: 30px;
+        color: rgb(44, 7, 255);
+        background-color: salmon;
+    }
+
+    p {
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        background-color: lightgray;
+    }
+    .pag2 h1 {
+        font-size: 50px;
+        color: rgb(243, 0, 0);
+        background-color: orange;
+    }
+
+    .pag2 h2 {
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        background-color: blueviolet;
+    }
+
+    .pag2 p {
+        font-size: 20px;
+        color: rgb(20, 170, 163);
+    }
+
+    a {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 20px;
+        color: rgb(255, 0, 0);
+    }
