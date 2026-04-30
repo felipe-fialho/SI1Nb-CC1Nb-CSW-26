@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.principal{
+    border: 30px solid white;
+    border-radius: 15px;
+    background-color: white;
+    width:50%;
+    margin: 0 auto;
+}
+
+.principal h1{
+    color:rgb(3, 59, 98);
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+}
+
+.body{
+    background-color: color(rgb(3, 59, 98));
+}
