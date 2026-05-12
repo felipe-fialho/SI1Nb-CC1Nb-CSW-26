@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nível Médio – Cards Responsivos</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #f5f7fb;
+      --card-bg: #ffffff;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --text-title: #111827;
+      --text-body: #4b5563;
+      --text-muted: #9ca3af;
+      --border: #e5e9f2;
+      --shadow: 0 4px 20px rgba(37, 99, 235, .10);
+      --shadow-hover: 0 12px 40px rgba(37, 99, 235, .22);
+      --radius: 14px;
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 20px;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      width: 100%;
+      max-width: 960px;
+    }
+
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px 24px;
+      box-shadow: var(--shadow);
+
+      flex: 1 1 260px;
+      max-width: 300px;
+
+      /* Coluna interna: empurra o botão para o fundo */
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--text-title);
+      line-height: 1.25;
+    }
+
+    .card-text {
+      font-size: .875rem;
+      color: var(--text-body);
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    /* Botão sempre na parte inferior do card */
+    .btn {
+      display: inline-block;
+      text-align: center;
+      padding: 11px 0;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: .875rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      /* Ocupa toda a largura do card */
+      width: 100%;
+      margin-top: auto;
+      transition: background .2s, transform .15s;
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+      transform: scale(1.02);
+    }
+
+    .cards-container {
+      align-items: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 400px;
+      flex-basis: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cards-container">
+
+    <div class="card">
+
+      <h3 class="card-title">Título 1</h3>
+      <p class="card-text">
+        Este é um exemplo de texto para o card. Conteúdo simples para
+        demonstração.
+      </p>
+      <a href="#" class="btn">Saiba mais</a>
+    </div>
+
+
+    <div class="card">
+      <h3 class="card-title">Título 2</h3>
+      <p class="card-text">
+        Outro exemplo de conteúdo para mostrar como os cards funcionam com
+        textos de tamanhos variados.
+      </p>
+      <a class="btn">Saiba mais</a>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">Título 3</h3>
+      <p class="card-text">
+        Mais um card com conteúdo de exemplo para completar o layout.
+      </p>
+      <a class="btn">Saiba mais</a>
+    </div>
+
+  </div>
+</body>
+
+</html>
