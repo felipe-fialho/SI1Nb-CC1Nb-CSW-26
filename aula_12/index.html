@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aula 14 – ID, Class, Div e Span</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0d0d0d;
+      --surface1: #141414;
+      --surface2: #1a1a2e;
+      --accent1: #e94560;
+      --accent2: #1db954;
+      --accent3: #ff0000;
+      --accent4: #ff9900;
+      --text: #f0f0f0;
+      --muted: #888;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      text-align: center;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #e94560, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+
+    .wrapper {
+      display: flex;
+      gap: 32px;
+      width: 100%;
+      max-width: 900px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #streaming {
+      flex: 1;
+      min-width: 280px;
+      background: var(--surface1);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #streaming::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(233, 69, 96, 0.18), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+
+    .div-label {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent1);
+      border: 1px solid var(--accent1);
+      border-radius: 6px;
+      padding: 3px 10px;
+      margin-bottom: 20px;
+    }
+
+    .div-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 28px;
+      color: #fff;
+    }
+
+    .music-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: var(--text);
+      padding: 16px 20px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      margin-bottom: 14px;
+      font-size: 1rem;
+      font-weight: 500;
+      position: relative;
+      transition: background 0.25s, transform 0.2s, border-color 0.25s;
+    }
+
+    .music-link .note-icon {
+      font-size: 1.4rem;
+    }
+
+    .music-link::before {
+      content: '✽';
+      font-size: 0.9rem;
+      opacity: 0;
+      transform: translateX(-8px);
+      transition: opacity 0.2s, transform 0.2s;
+      color: inherit;
+    }
+
+    .music-link::after {
+      content: '✽';
+      font-size: 0.9rem;
+      opacity: 0;
+      transform: translateX(8px);
+      transition: opacity 0.2s, transform 0.2s;
+      color: inherit;
+      margin-left: auto;
+    }
+
+    .music-link:hover {
+      background: rgba(255, 255, 255, 0.07);
+      transform: translateX(4px);
+      border-color: currentColor;
+    }
+
+    .music-link:hover::before,
+    .music-link:hover::after {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .music-link:active {
+      transform: scale(0.97) translateX(0);
+      opacity: 0.8;
+    }
+
+    .link-spotify {
+      color: var(--accent2);
+    }
+
+    .link-spotify:hover {
+      background: rgba(29, 185, 84, 0.1);
+      border-color: var(--accent2);
+    }
+
+    .link-spotify:active {
+      background: rgba(29, 185, 84, 0.25);
+    }
+
+    .link-youtube {
+      color: var(--accent3);
+    }
+
+    .link-youtube:hover {
+      background: rgba(255, 0, 0, 0.1);
+      border-color: var(--accent3);
+    }
+
+    .link-youtube:active {
+      background: rgba(255, 0, 0, 0.25);
+    }
+
+    .link-amazon {
+      color: var(--accent4);
+    }
+
+    .link-amazon:hover {
+      background: rgba(255, 153, 0, 0.1);
+      border-color: var(--accent4);
+    }
+
+    .link-amazon:active {
+      background: rgba(255, 153, 0, 0.25);
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 18px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div id="streaming">
+      <span class="div-label">div #streaming</span>
+      <h2 class="div-title">Plataformas de Streaming</h2>
+
+      <a class="music-link link-spotify" href="https://open.spotify.com" target="_blank">
+        <span class="note-icon">♬</span> Spotify
+      </a>
+
+      <a class="music-link link-youtube" href="https://music.youtube.com" target="_blank">
+        <span class="note-icon">♬</span> YouTube Music
+      </a>
+
+      <a class="music-link link-amazon" href="https://music.amazon.com" target="_blank">
+        <span class="note-icon">♬</span> Amazon Music
+      </a>
+    </div>
+
+  </div>
+</body>
+
+</html>
