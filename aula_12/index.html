@@ -4,10 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aula 14 – ID, Class, Div e Span</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap"
-    rel="stylesheet" />
+  <title>Aula 12</title>
   <style>
     *,
     *::before,
@@ -93,19 +90,6 @@
       pointer-events: none;
     }
 
-
-    .div-label {
-      display: inline-block;
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent1);
-      border: 1px solid var(--accent1);
-      border-radius: 6px;
-      padding: 3px 10px;
-      margin-bottom: 20px;
-    }
-
     .div-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.5rem;
@@ -128,10 +112,6 @@
       font-weight: 500;
       position: relative;
       transition: background 0.25s, transform 0.2s, border-color 0.25s;
-    }
-
-    .music-link .note-icon {
-      font-size: 1.4rem;
     }
 
     .music-link::before {
@@ -222,19 +202,18 @@
   <div class="wrapper">
 
     <div id="streaming">
-      <span class="div-label">div #streaming</span>
       <h2 class="div-title">Plataformas de Streaming</h2>
 
       <a class="music-link link-spotify" href="https://open.spotify.com" target="_blank">
-        <span class="note-icon">♬</span> Spotify
+        Spotify
       </a>
 
       <a class="music-link link-youtube" href="https://music.youtube.com" target="_blank">
-        <span class="note-icon">♬</span> YouTube Music
+        YouTube Music
       </a>
 
       <a class="music-link link-amazon" href="https://music.amazon.com" target="_blank">
-        <span class="note-icon">♬</span> Amazon Music
+        Amazon Music
       </a>
     </div>
 
